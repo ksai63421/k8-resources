@@ -16,7 +16,7 @@ spec:
       valueFrom:
         configMapKeyRef:
           name: course-config
-          key: SAI
+          key: LEARNER
      -name: DURATION
       valueFrom:
          configMapKeyRef:
