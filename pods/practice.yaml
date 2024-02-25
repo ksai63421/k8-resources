@@ -1,0 +1,17 @@
+requests: # soft-limit
+          memoery: "64Mi"
+          cpu: "250m"
+  limits: # hard-limit
+  memeory: "128Mi"
+  cpui: "500m"
+
+  1 cpu == 1000m
+  250m = 0.25 cpu
+
+  soft limit is okay it can go upto 100mi
+  hard limit it cannot go upto 128mi 
+
+  by mistake it a defects in app ,it may get into the locks,it consume more memory, it can only block one container and not exceed above limit values, other cannot be affcted
+  if you dont mention about limits it can block entire server resources so that other pods and conatiners are affcetd
+  
+
