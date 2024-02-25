@@ -6,10 +6,10 @@ spec:
   containers:
   - name: niginx
     image: nginx  
-    resources:
+     resources:
       requests:
        cpu: "100m"
        memory: "128Mi" # its nothing but 128mb
-    limits:
-       cpu: "200m"
-       memory: "256Mi"
+      limits:
+        cpu: "200m"
+        memory: "256Mi"
