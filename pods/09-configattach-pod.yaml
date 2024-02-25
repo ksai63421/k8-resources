@@ -1,25 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: config-pod
+  name: config-pod-direct
 spec:
   containers:
-  - name: envar-demo-container
+  - name: config-pod
     image: nginx
-    env:
-    - name: COURSE
-      valueFrom:
-        configMapKeyRef:
-          name: course-config
-          key: COURSE
-    - name: PERSON
-      valueFrom:
-        configMapKeyRef:
-          name: course-config
-          key: LEARNER
-     -name: DURATION
-      valueFrom:
-         configMapKeyRef:
-           name: course-config
-           key: DURATION
+    envFrom:
+    - configMapRef:
+        name: course-config
+
 
