@@ -4,7 +4,7 @@ metadata:
  name: resources
 spec:
   containers:
-  - name: nignix
+  - name: niginx
     image: nginx  
     resources:
       requests:
